@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indexation des Documents</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Ajout d'un Document</h2>
+        <form action="traitementindexation.php" method="POST" enctype="multipart/form-data">
+            <label for="document">Document:</label>
+            <input type="file" id="document" name="document" accept=".pdf,.doc,.docx,.txt" required><br><br>
+
+            <label for="doc_title">Titre :</label>
+            <input type="text" id="doc_title" name="doc_title" maxlength="100" required><br><br>
+
+            <label for="doc_keywords">Mots clés (séparés par des virgules) :</label>
+            <input type="text" id="doc_keywords" name="doc_keywords" pattern="^[a-zA-Z0-9, ]+$" required><br><br>
+
+            <button type="submit">Envoyer</button>
+            <button type="reset">Effacer</button>
+        </form>
+    </div>
+</body>
+</html>
